@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "eb59cdb4-77c9-49cb-828e-6f279b4b62c7",
+		"name": "MovieTicket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "139487"
+	},
+	"item": [
+		{
+			"name": "Movie-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"DON\",\r\n    \"description\" :\"bollywood Movie\",\r\n    \"duration\" : \"3hrs\",\r\n    \"language\" :\"Hindi\",\r\n    \"releaseDate\" : \"27-07-2022\",\r\n    \"country\" : \"IND\",\r\n    \"category\": \"2D hindi movie\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addMovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addMovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.CinemaHall-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"hall-A\",\r\n    \"totalSeats\" :\"100\",\r\n    \"cinemaId\" : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addCinemaHall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addCinemaHall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.CinemaSeat-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cinemahallId\" : 6,\r\n    \"type\" :\"Gold\",\r\n    \"seatNumber\" : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addCinemaSeat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addCinemaSeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.show-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\" : \"28-07-2022\",\r\n    \"startTime\" :\"10:00\",\r\n    \"emdTime\" : \"13:00\",\r\n    \"cinemaHallId\":6,\r\n    \"movieId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addShow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addShow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.Booking-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\" : 4,\r\n    \"showid\" :8,\r\n    \"numberOfSeats\":10,\r\n    \"status\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addBooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9.ShowSeat-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\" : \"400\",\r\n    \"cinemaSeatId\" :7,\r\n    \"showId\":8,\r\n    \"bookingId\":9,\r\n    \"status\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addShowSeat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addShowSeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10.PAyment-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\" : 400,\r\n    \"timeStamp\" :\"28-07-2022\",\r\n    \"discountCouponId\":8,\r\n    \"remoteTansactionId\":123,\r\n    \"paymentMethod\":\"UPI\",\r\n    \"bookingId\":9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addPayment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.Cinama-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"natraj\",\r\n    \"totalCinemaHalls\" :\"4\",\r\n    \"cityId\" : 3\r\n    \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addCinema",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addCinema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"admin\",\r\n    \"password\" :\"admin\",\r\n    \"email\" : \"admin@admin.com\",\r\n    \"phone\" :\"9427062026\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Bangalore\",\r\n    \"state\" :\"Karnataka\",\r\n    \"zipcode\" : \"560064\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addCity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addCity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
